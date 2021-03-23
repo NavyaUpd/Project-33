@@ -74,7 +74,7 @@ function draw() {
   if(particle !== null){
     particle.display();
       if(particle.body.position.y > 760){
-        
+        count++;
           if(particle.body.position.x < 300){
             score += 500;
             particle = null;
@@ -102,7 +102,6 @@ function draw() {
 function mousePressed(){
   if(gamestate !== "end"){
     particle = new Particle(mouseX, 10, 10, 10);
-    count++;
     console.log(count);
   }
 }
